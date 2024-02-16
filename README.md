@@ -1,4 +1,4 @@
-# generate-iso-collapse
+# generate-iso-collapse for linux
 
 python 3.12
 
