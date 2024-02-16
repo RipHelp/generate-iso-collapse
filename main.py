@@ -1,3 +1,4 @@
+import logging
 import sys
 import argparse
 
@@ -23,9 +24,9 @@ if __name__ == '__main__':
     args = parse_args()
 
     Log = LogHelper()
-    Tools = Tools(log=Log, path=args.path[0], percent=args.percent[0])
+    Tools = Tools(path=args.path[0], percent=args.percent[0])
     if not Tools.verify_args():
-        Log.log_error("Получены не валидные аргументы")
+        logging.error("Получены не валидные аргументы")
     GenerateCollapse = GenerateCollapse(log=Log, tools=Tools)
 
     while True:

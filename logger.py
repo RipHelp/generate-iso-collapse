@@ -17,12 +17,6 @@ class LogHelper:
 
         self.save_generate_info()
 
-    def log_info(self, message: str):
-        return logging.info(message)
-
-    def log_error(self, message: str):
-        return logging.error(message)
-
     def save_generate_info(self, iso_name: str = 'iso_name', iso_size: float = 'iso_size', md5sum: hex = 'md5sum') -> bool:
         """Сохранение сгенерированной информации в файл"""
         with open("generate_info.txt", "a") as generate_log:
